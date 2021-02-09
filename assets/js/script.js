@@ -27,8 +27,12 @@ var lotrQuestions = [
     {
         question: "Gimli, son of _____",
         answers: {
-            a: 
-        }
+            a: "Thorin",
+            b: "Gloin",
+            c: "Dwalin",
+            d: "Balin"
+        },
+        rightAnswer: "b"
     }
 ]
 
