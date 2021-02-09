@@ -15,7 +15,7 @@ var lotrQuestions = [
         rightAnswer: "c"
     },
     {
-        questions: "Where do The Hobbits live?",
+        question: "Where do The Hobbits live?",
         answers: {
             a: "The Shire",
             b: "The Mire",
@@ -33,6 +33,26 @@ var lotrQuestions = [
             d: "Balin"
         },
         rightAnswer: "b"
+    },
+    {
+        question: "Who is Frod Baggins related to?",
+        answers: {
+            a: "Bilbo",
+            b: "Merry",
+            c: "Pippin",
+            d: "Samwise"
+        },
+        rightAnswer: "a"
+    },
+    {
+        question: "Aragon is the heir of _______",
+        answers: {
+            a: "Rohan",
+            b: "Elrond",
+            c: "Elendil"
+            d: "Isildur"
+        },
+        rightAnswer: "d"
     }
 ]
 
