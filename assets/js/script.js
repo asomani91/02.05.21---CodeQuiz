@@ -68,20 +68,15 @@ function countDown() {
     }, 1000);
 }
 
-
-
 function makeQuiz() {
-
+    countDown();
 }
-
 
 
 startButton.addEventListener("click", makeQuiz)
 
 
 
-function showScore() { }
-
-makeQuiz();
+function showScore() { }    
 
 //lotrScore.addEventListener("click", showScore);
