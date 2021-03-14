@@ -62,6 +62,13 @@ function countDown() {
     var time = setInterval(function () {
         timeLeft -= 1
         timeDisplay.innerHTML = timeLeft
+        if (q_no <= lotrQuestions.length - 1) {
+            lotrQuiz.innerHTM = lotrQuestions[q_no]["question"] + "<br>" +
+                '<button value="a" onclick="clicks(this.value)">' + lotrQuestions[q_no]["answers"]["a"] + '</button><br>' +
+                '<button value="b" onclick="clicks(this.value)">' + lotrQuestions[q_no]["answers"]["b"] + '</button><br>' +
+                '<button value="c" onclick="clicks(this.value)">' + lotrQuestions[q_no]["answers"]["a"] + '</button><br>' +
+                '<button value="d" onclick="clicks(this.value)">' + lotrQuestions[q_no]["answers"]["d"] + '</button><br>';
+        }
         if (timeLeft <= 0) {
             clearInterval(time)
         }
@@ -77,6 +84,6 @@ startButton.addEventListener("click", makeQuiz)
 
 
 
-function showScore() { }    
+function showScore() { }
 
 //lotrScore.addEventListener("click", showScore);
