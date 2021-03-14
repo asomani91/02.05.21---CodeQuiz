@@ -73,12 +73,16 @@ function countDown() {
         }
         else {
             lotrQuiz.innerHTML = "Your Total Score Is: " + score;
+            clearInterval(time);
         }
-        if (timeLeft <= 0) {
+        if (timeLeft == 0) {
             clearInterval(time)
+            console.log("Time Count");
         }
     }, 1000);
 }
+
+
 
 function makeQuiz() {
     countDown();
