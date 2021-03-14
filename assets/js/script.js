@@ -4,6 +4,8 @@ var lotrScore = document.getElementById("score");
 var startButton = document.getElementById("start");
 var timeDisplay = document.getElementById("time");
 var timeLeft = 60;
+var questionNumber = 0
+var score = 0
 var lotrQuestions = [
     {
         question: "How many Rings of Power are in existence?",
@@ -62,12 +64,15 @@ function countDown() {
     var time = setInterval(function () {
         timeLeft -= 1
         timeDisplay.innerHTML = timeLeft
-        if (q_no <= lotrQuestions.length - 1) {
-            lotrQuiz.innerHTM = lotrQuestions[q_no]["question"] + "<br>" +
-                '<button value="a" onclick="clicks(this.value)">' + lotrQuestions[q_no]["answers"]["a"] + '</button><br>' +
-                '<button value="b" onclick="clicks(this.value)">' + lotrQuestions[q_no]["answers"]["b"] + '</button><br>' +
-                '<button value="c" onclick="clicks(this.value)">' + lotrQuestions[q_no]["answers"]["a"] + '</button><br>' +
-                '<button value="d" onclick="clicks(this.value)">' + lotrQuestions[q_no]["answers"]["d"] + '</button><br>';
+        if (questionNumber <= lotrQuestions.length - 1) {
+            lotrQuiz.innerHTM = lotrQuestions[questionNumber]["question"] + "<br>" +
+                '<button value="a" onclick="clicks(this.value)">' + lotrQuestions[questionNumber]["answers"]["a"] + '</button><br>' +
+                '<button value="b" onclick="clicks(this.value)">' + lotrQuestions[questionNumber]["answers"]["b"] + '</button><br>' +
+                '<button value="c" onclick="clicks(this.value)">' + lotrQuestions[questionNumber]["answers"]["c"] + '</button><br>' +
+                '<button value="d" onclick="clicks(this.value)">' + lotrQuestions[questionNumber]["answers"]["d"] + '</button><br>';
+        }
+        else {
+            lotrQuiz.innerHTML = "Your Total Score Is: " + score;
         }
         if (timeLeft <= 0) {
             clearInterval(time)
