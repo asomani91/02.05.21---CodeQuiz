@@ -60,7 +60,7 @@ var lotrQuestions = [
 ]
 
 function countDown() {
-    console.log("clicked")
+    console.log("Clicked")
     var time = setInterval(function () {
         timeLeft -= 1
         timeDisplay.innerHTML = timeLeft
@@ -82,9 +82,21 @@ function countDown() {
     }, 1000);
 }
 
-
+function clicks(val) {
+    if (lotrQuestions [questionNumber]["rightAnswer"] == val) {
+        questionNumber += 1;
+        score += 1;
+        console.log(questionNumber);
+    }
+    else {
+        questionNumber += 1;
+        timeLeft -= 5;
+        console.log("This Answer Is Not Correct". questionNumber)
+    }
+}
 
 function makeQuiz() {
+    startButton.style.visibility = "Hideen";
     countDown();
 }
 
