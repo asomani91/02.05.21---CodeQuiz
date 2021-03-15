@@ -4,8 +4,7 @@ var lotrScore = document.getElementById("score");
 var startButton = document.getElementById("start");
 var timeDisplay = document.getElementById("time");
 var timeLeft = 60;
-var questionNumber = 0
-var score = 0
+var questionNumber = 0, score = 0;
 var lotrQuestions = [
     {
         question: "How many Rings of Power are in existence?",
@@ -60,12 +59,12 @@ var lotrQuestions = [
 ]
 
 function countDown() {
-    console.log("Clicked")
+    console.log("clicked")
     var time = setInterval(function () {
-        timeLeft -= 1
-        timeDisplay.innerHTML = timeLeft
+        timeLeft -= 1;
+        timeDisplay.innerHTML = timeLeft;
         if (questionNumber <= lotrQuestions.length - 1) {
-            lotrQuiz.innerHTM = lotrQuestions[questionNumber]["question"] + "<br>" +
+            lotrQuiz.innerHTML = lotrQuestions[questionNumber]["question"] + "<br>" +
                 '<button value="a" onclick="clicks(this.value)">' + lotrQuestions[questionNumber]["answers"]["a"] + '</button><br>' +
                 '<button value="b" onclick="clicks(this.value)">' + lotrQuestions[questionNumber]["answers"]["b"] + '</button><br>' +
                 '<button value="c" onclick="clicks(this.value)">' + lotrQuestions[questionNumber]["answers"]["c"] + '</button><br>' +
@@ -76,14 +75,14 @@ function countDown() {
             clearInterval(time);
         }
         if (timeLeft == 0) {
-            clearInterval(time)
-            console.log("Time Count");
+            clearInterval(time);
+            console.log("reach");
         }
     }, 1000);
 }
 
 function clicks(val) {
-    if (lotrQuestions [questionNumber]["rightAnswer"] == val) {
+    if (lotrQuestions[questionNumber]["rightAnswer"] == val) {
         questionNumber += 1;
         score += 1;
         console.log(questionNumber);
@@ -91,20 +90,18 @@ function clicks(val) {
     else {
         questionNumber += 1;
         timeLeft -= 5;
-        console.log("This Answer Is Not Correct". questionNumber)
+        console.log("This Answer Is Not Correct".questionNumber)
     }
 }
 
 function makeQuiz() {
-    startButton.style.visibility = "Hideen";
+    startButton.style.visibility = "Hiden";
     countDown();
 }
 
-
 startButton.addEventListener("click", makeQuiz)
 
-
-
 function showScore() { }
+
 
 //lotrScore.addEventListener("click", showScore);
