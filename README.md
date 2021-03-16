@@ -2,9 +2,9 @@
 
 LINKS
 
------
-
 - https://github.com/asomani91/02.05.21---CodeQuiz
+
+-----
 
 Welcome to my Lord of the Rings quiz page! As a huge fan of the trilogy, I decided it would be great to create questions for the nerds. Hope you enjoy!
 
